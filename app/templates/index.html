@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Organizer</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <!-- Agrega Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script>
+        // Configuración de Firebase
+        const firebaseConfig = {
+            apiKey: "TU_API_KEY",
+            authDomain: "TU_PROJECT_ID.firebaseapp.com",
+            projectId: "TU_PROJECT_ID",
+            storageBucket: "TU_PROJECT_ID.appspot.com",
+            messagingSenderId: "TU_SENDER_ID",
+            appId: "TU_APP_ID"
+        };
+
+        // Inicializar Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+
+<body>
+    <h1>Bookmark Organizer</h1>
+
+    <div id="marker-form">
+        <input type="text" id="url" placeholder="Enter URL">
+        <input type="text" id="title" placeholder="Enter Title">
+        <input type="text" id="category" placeholder="Enter Category">
+        <button onclick="addMarker()">Add Marker</button>
+    </div>
+
+    <div id="marker-list">
+        <!-- Aquí se mostrarán los marcadores -->
+    </div>
+
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
+
